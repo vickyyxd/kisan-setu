@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  kisan-setu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kisan-setu-app
+    restart: always
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+      - NODE_ENV=production
